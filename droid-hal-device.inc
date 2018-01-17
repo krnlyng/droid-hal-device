@@ -174,6 +174,7 @@ BuildRequires:  droid-system-vendor-obsbuild
 
 ################
 %package devel
+BuildArch: noarch
 Group:	Development/Tools
 # Requires: %%{name} = %%{version}-%%{release}
 Provides: droid-hal-devel
