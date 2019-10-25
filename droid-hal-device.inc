@@ -169,6 +169,7 @@ BuildRequires:  rsync
 # starting from Android 8
 BuildRequires:  python
 Requires(pre):  droid-hal-%{rpm_device}-users
+Requires:       droid-hal-%{rpm_device}-users
 %if 0%{?straggler_files:1}
 Requires:       droid-hal-%{rpm_device}-detritus
 %endif
@@ -200,7 +201,7 @@ Needed by libhybris
 ################
 %package users
 Group:	Tools
-# Requires: %%{name} = %%{version}-%%{release}
+Requires: %{name} = %{version}-%{release}
 Provides: droid-hal-users
 Summary: Create users and groups for device: %{rpm_device}
 
